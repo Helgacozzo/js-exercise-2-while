@@ -55,3 +55,30 @@ while (gioco == 'si'  gioco == 'Si'  gioco == 'SI') {
     else {
         alert('Pareggio');
     }
+
+    alert('Punteggio: TU = ' + vittorieG + '  PC = ' + vittoriePc);
+    gioco = prompt('Vuoi continuare a giocare?')
+}
+
+
+
+//INDOVINELLO
+let numMax = prompt('Scegli il numero massimo tra cui indovinare');
+
+let numX = Math.floor((Math.random() * numMax) + 1);
+
+let numG = prompt('Indovina il numero al quale sto pensando');
+
+while (!(numX === numG)){
+    if (numG > numX){
+        numG = prompt('Sbagliato! Prova con un numero più basso');
+    }
+    else if (numG < numX){
+        numG = prompt('Sbagliato! Prova con un numero più alto');
+    }
+    else {
+        alert('Congratulazioni! Hai Indovinato');
+    }
+}
+
+alert('Congratulazioni! Hai Indovinato');
