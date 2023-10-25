@@ -67,18 +67,20 @@ let numMax = prompt('Scegli il numero massimo tra cui indovinare');
 
 let numX = Math.floor((Math.random() * numMax) + 1);
 
-let numG = prompt('Indovina il numero al quale sto pensando');
+let numG = undefined;
 
-while (!(numX === numG)){
+while (!(numG===numX)){
+    let numG = prompt('Indovina il numero al quale sto pensando');
+
     if (numG > numX){
-        numG = prompt('Sbagliato! Prova con un numero più basso');
+        alert('Sbagliato! Prova con un numero più basso');
     }
     else if (numG < numX){
-        numG = prompt('Sbagliato! Prova con un numero più alto');
+        alert('Sbagliato! Prova con un numero più alto');
     }
     else {
-        alert('Congratulazioni! Hai Indovinato');
+        alert('Congratulazioni! Hai Indovinato!');
+        break;
     }
-}
 
-alert('Congratulazioni! Hai Indovinato');
+}
